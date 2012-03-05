@@ -1,0 +1,41 @@
+/* Test av SableCC, gör en adder från en tutorial bara.
+C++arl Feb 2012
+*/
+
+Package simpleAdder;
+
+Helpers
+	letter = [['a' .. 'z'] + ['A' .. 'Z']];
+	digit = ['0' .. '9'];
+	sp = ' ';
+	nl = 10;
+	cr = 13;
+	crap = (sp | '\t' | cr nl | nl | cr )+;
+	comment = '//'+ (letter | digit | crap)+;
+	
+	plus = '+';
+	minus = '-';
+	div = '/';
+	mult = '*';
+	
+Tokens
+	integer = digit+ sp?;
+	id = letter (letter|digit)*;
+	semi = ';';
+	
+	op = (plus|minus|div|mult);
+	
+	whitespace = (comment | sp);
+	linestuff = (cr nl | nl | cr);
+	
+Ignored Tokens
+	whitespace;
+	
+Productions
+	program = lol*;
+	lol = integer temp+ semi linestuff?;
+	temp = op integer;
+
+	
+
+	

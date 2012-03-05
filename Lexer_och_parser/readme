@@ -1,0 +1,7 @@
+1. Kompilera först simpleAdder.txt med SableCC.
+	java -jar sablecc.jar simpleAdder.txt
+2. Kompilera Main.java.
+	javac simpleAdder/Main.java
+3. Kör skiten.
+	java simpleAdder.Main
+
