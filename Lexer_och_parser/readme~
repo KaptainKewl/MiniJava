@@ -1,5 +1,3 @@
-Den nuvarande lexern och parser är mycket enkel, mest för att testa SableCC.
-
 1. Kompilera först simpleAdder.txt med SableCC.
 	java -jar sablecc.jar simpleAdder.txt
 2. Kompilera Main.java.
